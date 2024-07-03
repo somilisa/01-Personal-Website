@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand-container">
+          <a class="brand" href="#">
+            <p>Somi Kafe</p>
+          </a>
+          <!-- <div class="hidden">
+            <button>svg</button>
+          </div> -->
+        </div>
+        <div class="navbar-collapse">
+          <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#About">Skills</a>
+            <a href="#Contact">Portfolio</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-container">
+        <div class="hero">
+          <p>Frontend Developer</p>
+          <h1 data-testid="slackDisplayName">Somi Kafe</h1>
+          <p>
+            Over the next two years, my primary goal is to become a software
+            engineer, focusing on Node.js. I am doing an internship at
+            <span
+              ><a
+                target="_blank"
+                href="http://hng.tech/learn"
+                data-testid="hngLink"
+                >HNG</a
+              ></span
+            >
+            as a path to fulfilling my goals. I plan to contribute to more
+            open-source projects to give back, network, and learn from
+            experienced developers. Ultimately, my goal is to be a valuable
+            member of the tech community, continuously learning and making
+            meaningful contributions.
+          </p>
+          <p class="links">
+            Sites to Visit:
+            <a
+              target="_blank"
+              href="http://keyword.dog"
+              data-testid="keywordLink"
+              >keyword</a
+            ><a
+              target="_blank"
+              href="http://scrapeanyweb.site"
+              data-testid="scrapeanywebLink"
+              >scrape</a
+            >
+          </p>
+          <p class="contact">
+            Contact Me:
+            <span data-testid="slackEmail" id="email">somkafe1@gmail.com</span>
+          </p>
+          <p class="day-time">
+            Day/Time: <span id="day"></span> <span id="time"></span>
+          </p>
+        </div>
+        <div class="hero-img">
+          <img
+            src="slack_picture.JPG"
+            alt=""
+            data-testid="slackProfilePicture"
+          />
+        </div>
+      </section>
+      <section class="projects-wrapper">
+        <div class="projects-container">
+          <h2>MY CRAFT</h2>
+          <div class="projects">
+            <article class="project">
+              <img src="GoFoodsNg.png" alt="" />
+              <div>
+                <p>
+                  GoFoodsNG is a restaurant listing website that allows people
+                  to discover, get details about, and leave ratings or reviews
+                  on restaurants in an area of their choice.
+                </p>
+              </div>
+            </article>
+            <article class="project">
+              <img src="Nexeri.png" alt="" />
+              <div>
+                <p>
+                  A blog built with nextJS, typescript and integrated with
+                  contentful CMS
+                </p>
+              </div>
+            </article>
+            <article class="project">
+              <img src="Coffetto.png" alt="" />
+              <div>
+                <p>
+                  A responsive landing page for Coffetto; a coffee company built
+                  with React and Typescript
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    const now = new Date();
+    let day = days[now.getDay()];
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    document.getElementById("day").innerHTML = day;
+    document.getElementById("time").innerHTML = `${hours}:${minutes}`;
+  </script>
+</html>
